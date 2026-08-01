@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Pocket GRE icon">
+  <rect width="512" height="512" rx="120" fill="#17171b"/>
+  <g fill="#c8ff32" transform="translate(256 256) rotate(45)">
+    <path d="M-148-148C-76-148-52-76-52-20h-96z"/>
+    <path d="M148-148C76-148 52-76 52-20h96z"/>
+    <path d="M148 148C76 148 52 76 52 20h96z"/>
+    <path d="M-148 148C-76 148-52 76-52 20h-96z"/>
+  </g>
+</svg>

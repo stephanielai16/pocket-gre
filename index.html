@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#17171b" />
+    <meta name="description" content="GRE vocabulary for the little gaps in your day." />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <title>Pocket GRE</title>
+    <script type="module" crossorigin src="./assets/index-KPJSM-ny.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BfuS3EZb.css">
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <button class="brand" data-view="study" aria-label="Go to study">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span>POCKET GRE</span>
+        </button>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <button class="nav-link active" data-view="study">Study</button>
+          <button class="nav-link" data-view="words">Words</button>
+          <button class="nav-link" data-view="progress">Progress</button>
+        </nav>
+
+        <div class="header-tools">
+          <button class="profile-button" aria-label="Stephanie's profile">S</button>
+          <span class="time-pill"><span class="clock-icon" aria-hidden="true"></span><b id="minutes-label">4 min</b></span>
+        </div>
+      </header>
+
+      <main>
+        <section id="study-view" class="view active" aria-labelledby="current-word">
+          <aside class="habit-cue">
+            <span class="cue-orbit"><span class="mini-mark">✦</span></span>
+            <p class="eyebrow">A tiny pocket of progress</p>
+            <h1>Tiny words.<br />Big edge.</h1>
+            <p>Use the moments you would normally lose to scrolling.</p>
+            <button class="text-button" id="session-size-button">Today: <b>10 quick words</b> <span>→</span></button>
+          </aside>
+
+          <div class="study-column">
+            <div class="session-kicker">
+              <span><i class="live-dot"></i> Quick session</span>
+              <button id="shortcut-button" aria-label="Show keyboard shortcuts">Shortcuts</button>
+            </div>
+
+            <article class="word-card" id="word-card" tabindex="0" aria-describedby="card-instructions">
+              <div class="swipe-hint swipe-left">Again</div>
+              <div class="swipe-hint swipe-right">Got it</div>
+
+              <div class="word-meta">
+                <span class="part-of-speech" id="part-of-speech">adjective</span>
+                <button class="sound-button" id="sound-button" aria-label="Hear pronunciation">
+                  <span class="sound-waves" aria-hidden="true"><i></i><i></i><i></i></span>
+                </button>
+              </div>
+
+              <div class="word-content">
+                <p class="word-number" id="word-number">Word 1 of 700</p>
+                <h2 id="current-word">Abate</h2>
+
+                <button class="reveal-button" id="reveal-button">
+                  <span>Tap to reveal</span>
+                  <small>or press space</small>
+                </button>
+
+                <div class="answer" id="answer" aria-live="polite">
+                  <p class="definition" id="definition">To reduce in amount, degree, or severity</p>
+                  <div class="divider"></div>
+                  <p class="synonyms-line"><span>Synonyms</span><strong id="synonyms">Subside, diminish</strong></p>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                <div class="progress-row">
+                  <b id="progress-count">1 of 10</b>
+                  <span id="pace-label">Easy start</span>
+                </div>
+                <div class="progress-track"><span id="progress-fill"></span></div>
+
+                <div class="grade-controls" id="grade-controls" aria-label="How well did you know it?">
+                  <button data-grade="again" class="grade-button"><span class="grade-icon">↶</span><span>Again<small>1</small></span></button>
+                  <button data-grade="hard" class="grade-button"><span class="grade-icon">↗</span><span>Hard<small>2</small></span></button>
+                  <button data-grade="got" class="grade-button primary"><span class="grade-icon">✓</span><span>Got it<small>3</small></span></button>
+                </div>
+              </div>
+              <p id="card-instructions" class="sr-only">Tap the card to reveal the meaning. After revealing, swipe right for got it or left for again.</p>
+            </article>
+
+            <p class="mobile-swipe-copy">Reveal, rate, move on. About 20 seconds per word.</p>
+          </div>
+
+          <aside class="widget-zone">
+            <p class="widget-label">HOME SCREEN WORD</p>
+            <button class="widget-card" id="widget-card" aria-label="Set up home screen word">
+              <div class="widget-main">
+                <span class="widget-icon">▤</span>
+                <span><b id="widget-word">Abate</b><small id="widget-definition">To reduce in amount, degree, or severity</small></span>
+              </div>
+              <div class="widget-footer">
+                <span><i class="clock-icon"></i> Refreshes with your deck</span>
+                <b>Set up <span>✦</span></b>
+              </div>
+            </button>
+            <p class="widget-note">Put a word where your thumb already goes.</p>
+          </aside>
+        </section>
+
+        <section id="words-view" class="view content-view" aria-labelledby="words-title">
+          <div class="page-heading">
+            <div><p class="eyebrow">Your working vocabulary</p><h1 id="words-title">Word deck</h1><p>Stephanie’s complete GRE list, ready for quick review.</p></div>
+            <div class="deck-count"><b id="deck-count">700</b><span>words loaded</span></div>
+          </div>
+          <div class="words-toolbar">
+            <label class="search-box"><span aria-hidden="true">⌕</span><input id="word-search" type="search" placeholder="Search words or meanings" /></label>
+            <div class="filter-group" aria-label="Filter words">
+              <button class="filter-chip active" data-filter="all">All</button>
+              <button class="filter-chip" data-filter="learning">Learning</button>
+              <button class="filter-chip" data-filter="strong">Strong</button>
+            </div>
+          </div>
+          <div id="word-list" class="word-list"></div>
+          <div class="import-placeholder">
+            <span class="import-icon">✓</span>
+            <div><b>Stephanie’s PDF is loaded</b><p>Definitions and synonyms from all 700 unique words are available offline.</p></div>
+            <span class="status-pill">Complete</span>
+          </div>
+        </section>
+
+        <section id="progress-view" class="view content-view" aria-labelledby="progress-title">
+          <div class="page-heading">
+            <div><p class="eyebrow">Small moments, compounded</p><h1 id="progress-title">Progress</h1><p>Built around consistency, not marathon study blocks.</p></div>
+            <div class="streak-badge"><span>✦</span><b id="streak-number">1</b><small>day streak</small></div>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card featured"><span>Words reviewed</span><b id="reviewed-stat">0</b><small>all time</small></article>
+            <article class="stat-card"><span>Feeling strong</span><b id="strong-stat">0</b><small>words</small></article>
+            <article class="stat-card"><span>Today</span><b id="today-stat">0</b><small>quick reviews</small></article>
+          </div>
+          <div class="progress-panels">
+            <article class="weekly-card">
+              <div class="panel-heading"><div><b>This week</b><span>Minutes found in the margins</span></div><strong id="weekly-total">0 min</strong></div>
+              <div class="bar-chart" id="bar-chart" aria-label="Reviews completed over the last seven days"></div>
+            </article>
+            <article class="white-space-card">
+              <span class="mini-mark">✦</span>
+              <p class="eyebrow">Stephanie’s white-space plan</p>
+              <h2>No extra study block required.</h2>
+              <ul><li><span>Morning</span><b>1 home-screen word</b></li><li><span>Waiting</span><b>5-word quick session</b></li><li><span>Scrolling urge</span><b>Open Pocket GRE first</b></li></ul>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <button class="active" data-view="study"><span>✦</span>Study</button>
+        <button data-view="words"><span>▤</span>Words</button>
+        <button data-view="progress"><span>⌁</span>Progress</button>
+      </nav>
+    </div>
+
+    <dialog id="setup-dialog" class="modal">
+      <button class="modal-close" data-close-modal aria-label="Close">×</button>
+      <span class="modal-mark">✦</span>
+      <p class="eyebrow">Meet yourself where you scroll</p>
+      <h2>Put Pocket GRE on your home screen</h2>
+      <p id="install-copy">Install the app for one-tap access. Your deck and progress stay on this device.</p>
+      <div class="mini-widget-preview"><span>WORD 01</span><b id="modal-word">Abate</b><p id="modal-definition">To reduce in amount, degree, or severity</p></div>
+      <button class="modal-primary" id="install-button">Add to home screen</button>
+      <button class="modal-secondary" data-close-modal>Maybe later</button>
+    </dialog>
+
+    <dialog id="shortcuts-dialog" class="modal shortcuts-modal">
+      <button class="modal-close" data-close-modal aria-label="Close">×</button>
+      <p class="eyebrow">Move without breaking focus</p>
+      <h2>Keyboard shortcuts</h2>
+      <dl><div><dt>Space</dt><dd>Reveal meaning</dd></div><div><dt>1</dt><dd>Again</dd></div><div><dt>2</dt><dd>Hard</dd></div><div><dt>3</dt><dd>Got it</dd></div><div><dt>S</dt><dd>Hear word</dd></div></dl>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"><span>✦</span><b id="toast-message">Saved</b></div>
+  </body>
+</html>

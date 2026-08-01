@@ -1,0 +1,13 @@
+{
+  "name": "Pocket GRE for Stephanie",
+  "short_name": "Pocket GRE",
+  "description": "GRE vocabulary for the little gaps in your day.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#17171b",
+  "theme_color": "#17171b",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

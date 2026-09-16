@@ -1,4 +1,4 @@
-const CACHE_NAME = "pocket-gre-v5";
+const CACHE_NAME = "pocket-gre-v6";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.add("./")));

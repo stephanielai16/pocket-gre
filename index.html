@@ -8,8 +8,8 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
     <title>Pocket GRE</title>
-    <script type="module" crossorigin src="./assets/index-Bqrycxi9.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BfuS3EZb.css">
+    <script type="module" crossorigin src="./assets/index-D9742tpe.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-cpN7C-9N.css">
   </head>
   <body>
     <div class="ambient ambient-one"></div>
@@ -24,6 +24,7 @@
 
         <nav class="desktop-nav" aria-label="Primary navigation">
           <button class="nav-link active" data-view="study">Study</button>
+          <button class="nav-link" data-view="quiz">Quiz</button>
           <button class="nav-link" data-view="words">Words</button>
           <button class="nav-link" data-view="progress">Progress</button>
         </nav>
@@ -74,6 +75,7 @@
                   <p class="definition" id="definition">To reduce in amount, degree, or severity</p>
                   <div class="divider"></div>
                   <p class="synonyms-line"><span>Synonyms</span><strong id="synonyms">Subside, diminish</strong></p>
+                  <p class="memory-line"><span>Memory sentence</span><strong id="memory-sentence">As the storm moved away, the winds began to abate.</strong></p>
                 </div>
               </div>
 
@@ -112,6 +114,31 @@
           </aside>
         </section>
 
+        <section id="quiz-view" class="view content-view quiz-view" aria-labelledby="quiz-title">
+          <div class="page-heading quiz-heading">
+            <div><p class="eyebrow">GRE-style text completion</p><h1 id="quiz-title">Context quiz</h1><p>Choose the word that best completes each sentence.</p></div>
+            <div class="quiz-score"><b id="quiz-score">0</b><span>correct</span></div>
+          </div>
+          <article class="quiz-card" id="quiz-card">
+            <div class="quiz-meta"><span id="quiz-progress">Question 1 of 10</span><span id="quiz-streak">Fresh start</span></div>
+            <p class="quiz-instruction">Select the best answer.</p>
+            <h2 id="quiz-prompt">As the storm moved away, the winds began to ____.</h2>
+            <div class="quiz-options" id="quiz-options" role="group" aria-label="Answer choices"></div>
+            <div class="quiz-feedback" id="quiz-feedback" aria-live="polite" hidden>
+              <p class="quiz-verdict" id="quiz-verdict"></p>
+              <p id="quiz-explanation"></p>
+              <button class="quiz-next" id="quiz-next">Next question <span>→</span></button>
+            </div>
+          </article>
+          <div class="quiz-complete" id="quiz-complete" hidden>
+            <span class="mini-mark">✦</span>
+            <p class="eyebrow">Set complete</p>
+            <h2 id="quiz-final-score">You scored 0/10</h2>
+            <p>Missed words have been moved back into your learning queue.</p>
+            <button class="quiz-next" id="quiz-restart">Start another 10</button>
+          </div>
+        </section>
+
         <section id="words-view" class="view content-view" aria-labelledby="words-title">
           <div class="page-heading">
             <div><p class="eyebrow">Your working vocabulary</p><h1 id="words-title">Word deck</h1><p>Stephanie’s complete GRE list, ready for quick review.</p></div>
@@ -142,6 +169,7 @@
             <article class="stat-card featured"><span>Words reviewed</span><b id="reviewed-stat">0</b><small>all time</small></article>
             <article class="stat-card"><span>Feeling strong</span><b id="strong-stat">0</b><small>words</small></article>
             <article class="stat-card"><span>Today</span><b id="today-stat">0</b><small>quick reviews</small></article>
+            <article class="stat-card"><span>Quiz accuracy</span><b id="quiz-accuracy-stat">—</b><small>all time</small></article>
           </div>
           <div class="progress-panels">
             <article class="weekly-card">
@@ -160,6 +188,7 @@
 
       <nav class="mobile-nav" aria-label="Mobile navigation">
         <button class="active" data-view="study"><span>✦</span>Study</button>
+        <button data-view="quiz"><span>?</span>Quiz</button>
         <button data-view="words"><span>▤</span>Words</button>
         <button data-view="progress"><span>⌁</span>Progress</button>
       </nav>
